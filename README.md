@@ -36,42 +36,30 @@ Diff = A ⊕ B ⊕ Bin
 
 Borrow out = A'Bin + A'B + BBin
 
-**Truthtable**
+## Truthtable
+## Full_adder
+![Screenshot 2024-03-18 181619](https://github.com/23005672/FULL_ADDER_SUBTRACTOR/assets/138971519/0b18ce6a-ab4d-42f7-aff3-e6422eb679df)
+## Full_subtractor
+![Screenshot 2024-03-18 181628](https://github.com/23005672/FULL_ADDER_SUBTRACTOR/assets/138971519/c874805b-a6bc-430e-97ce-77aa6b706b66)
 
-**FULL ADDER:**
-
-![DE E-4 truthtable](https://github.com/04Varsha/FULL_ADDER_SUBTRACTOR/assets/149035374/7116d2bf-8e90-4e96-bfd5-d62af11a317a)
-
-**FULL SUBTRACTOR:**
-
-![DE E-4 subtractor truth table](https://github.com/04Varsha/FULL_ADDER_SUBTRACTOR/assets/149035374/33d8ba16-9169-40b0-8696-3bb8e5c3a0b7)
-
-
-**Procedure**
-
-Write the detailed procedure here
-
-~~~
-**Full Adder:**
+## Procedure
+```
+## Full Adder:
 1.Open Quartus II and create a new project.
 2.Use schematic design entry to draw the full adder circuit. 
 3.The circuit consists of XOR, AND, and OR gates. 
 4.Compile the design, verify its functionality through simulation. 
 5.Implement the design on the target device and program it.
 
-**Full Subtractor:** 
+## Full Subtractor: 
 1.Follow the same steps as for the full adder. 
 2.Draw the full subtractor circuit using schematic design. 
 3.The circuit includes XOR, AND, OR gates to perform subtraction. 
 4.Compile, simulate, implement, and program the design similarly to the full adder.
-~~~
-
-**Program:**
-
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-
-~~~
-
+```
+## Program:
+```
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
 ## Full_adder
 module fulladd_top(a,b,cin,sum,carry);
 input a,b,cin;
@@ -85,8 +73,9 @@ and(w3,b,cin);
 and(w4,cin,a);
 
 or(carry,w2,w3,w4);
-endmodule 
-
+endmodule
+```
+```
 ## Full_subtractor
 module fullsub_top(a,b,Bin,BO,DIFF);
 input a,b,Bin;
@@ -94,30 +83,20 @@ output BO,DIFF;
 assign DIFF = a ^ b ^ Bin;
   assign BO = (a & b) | ((a ^ b) & Bin);
 endmodule
-
-
-Developed by: VARSHA A
-RegisterNumber: 212223220121
-~~~
-
+Developed by: NITHISH KUMAR.B
+RegisterNumber: 212223040134
 */
+```
+## RTL Schematic
+![Screenshot 2024-03-18 181547](https://github.com/23005672/FULL_ADDER_SUBTRACTOR/assets/138971519/711ef60b-64a8-4ae0-88db-d56af7d28291)
 
-**RTL Schematic**
+## Output Timing Waveform
+## Full_adder
+![Screenshot (38)](https://github.com/23005672/FULL_ADDER_SUBTRACTOR/assets/138971519/1ebe8851-dd84-47c0-a6e2-040e73a61d8e)
+## Full_subtractor
+![Screenshot (39)](https://github.com/23005672/FULL_ADDER_SUBTRACTOR/assets/138971519/32788124-8d44-469f-a1a2-92375eb05afb)
 
-![318332382-c01e6c3c-d648-4bad-8a98-66d93df13f1a](https://github.com/04Varsha/FULL_ADDER_SUBTRACTOR/assets/149035374/2e45d893-4f83-4a98-8bc2-d0d30b70e7e2)
-
-**Output Timing Waveform**
-
-**FULL ADDER**
-
-![318332443-3411cbc7-4f76-4664-a513-e348a9880eff](https://github.com/04Varsha/FULL_ADDER_SUBTRACTOR/assets/149035374/5d286c1d-e62e-454a-a389-00ba2c2a91fc)
-
-**FULL SUBTRACTOR**
-
-![318332487-1cc068c4-6398-4a52-bae8-39c6657c0a9a](https://github.com/04Varsha/FULL_ADDER_SUBTRACTOR/assets/149035374/03d5d030-815e-4847-a976-2fd282cf0333)
-
-
-**Result:**
+## Result:
 
 Thus the Full Adder and Full Subtractor circuits are designed and the truth tables is verified using Quartus software.
 
